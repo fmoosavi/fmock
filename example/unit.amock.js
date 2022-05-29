@@ -1,10 +1,10 @@
 // [GET,...,All] /unit
-amock({
+fmock({
     path:"/unit",
     response:{
         code:"1",
         msg:"success",
-        data:"hello amock"
+        data:"hello fmock"
     },
     filter:function(req,req){
         return req;

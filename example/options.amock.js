@@ -1,4 +1,4 @@
-amock([{
+fmock([{
     path:"/testOptions", //[GET,...,All] /options/v1/testOptions
     response:{
         someProp:"some prop"
@@ -26,7 +26,7 @@ amock([{
 })
 
 /**
- * request http://localhost:3000/options/v1/testOptions  [port-> should be your ./amock/settings.json config]
+ * request http://localhost:3000/options/v1/testOptions  [port-> should be your ./fmock/settings.json config]
  * respsone
  * {
         "somethingCodes": "200",

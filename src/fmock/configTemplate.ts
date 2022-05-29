@@ -1,5 +1,5 @@
 export class ConfigTemplate{
-    public static getDefaultAMockConfigTemplate(config:any):string{
+    public static getDefaultFMockConfigTemplate(config:any):string{
         return `
 {
     "name": "${config.name}",

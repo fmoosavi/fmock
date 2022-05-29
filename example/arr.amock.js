@@ -1,7 +1,7 @@
 /***
  * methods supported: get,post,delete,put,all
  */
-amock([{
+fmock([{
     path:"/withoutFilter", // [GET,...,All] /withoutFilter
     response:{
         code:"200",
@@ -13,7 +13,7 @@ amock([{
     response:{
         code:"200",
         msg:"success",
-        data:"hello amock"
+        data:"hello fmock"
     },
     filter:function(req,res){
         if(req.params.type == 1){

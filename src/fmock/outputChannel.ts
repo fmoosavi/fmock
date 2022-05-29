@@ -5,8 +5,8 @@ import { DateUtil} from './dateUtil'
 export class OutputChannel {
     public static appendLine(value: string) {
         OutputChannel.outputChannel.show(true);
-        OutputChannel.outputChannel.appendLine(`[Info ${DateUtil.formatDate(new Date(),"YYYY-MM-DD HH:mm")}] amock>> ${value}`);
+        OutputChannel.outputChannel.appendLine(`[Info ${DateUtil.formatDate(new Date(),"YYYY-MM-DD HH:mm")}] fmock>> ${value}`);
     }
 
-    private static outputChannel = vscode.window.createOutputChannel("AMock");
+    private static outputChannel = vscode.window.createOutputChannel("FMock");
 }

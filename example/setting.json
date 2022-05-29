@@ -1,4 +1,4 @@
 {
-    "name": "amock server",
+    "name": "fmock server",
     "port":"3000"
 }

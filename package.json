@@ -1,8 +1,9 @@
 {
-  "name": "amock",
-  "displayName": "amock",
-  "publisher": "gamedilong",
-  "description": "It's a lightweight mock server plugin based on express. No more than 5 minutes of skilled use.",
+  "name": "fmock",
+  "displayName": "fmock",
+  "publisher": "fmoosavi",
+  "icon":"resources/fmock.png",
+  "description": "It's a lightweight mock server plugin based on express. No more than 5 minutes of skilled use. (a fork from amock)",
   "version": "0.0.1",
   "keywords": [
     "Mock",
@@ -14,13 +15,13 @@
     "vscode"
   ],
   "bugs": {
-    "url": "https://github.com/gamedilong/amock/issues",
+    "url": "https://github.com/gamedilong/fmock/issues",
     "email": "1104238614@qq.com"
   },
-  "homepage": "https://github.com/gamedilong/amock",
+  "homepage": "https://github.com/gamedilong/fmock",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gamedilong/amock.git"
+    "url": "https://github.com/gamedilong/fmock.git"
   },
   "engines": {
     "vscode": "^1.38.0"
@@ -29,39 +30,48 @@
     "Other"
   ],
   "activationEvents": [
-    "onView:amock",
-    "onCommand:extension.amockStart"
+    "onView:fmock",
+    "onCommand:extension.fmockStart"
   ],
   "main": "./out/extension.js",
   "contributes": {
-    "views": {
-      "explorer": [
+    "viewsContainers": {
+      "activitybar": [
         {
-          "id": "amock",
-          "name": "amock"
+          "id": "fmock-server",
+          "title": "Fmock Server",
+          "icon":"resources/dark/fmock.svg"
+        }
+      ]
+    },
+    "views": {
+      "fmock-server": [
+        {
+          "id": "fmock",
+          "name": "Mock Server"
         }
       ]
     },
     "commands": [
       {
-        "command": "extension.amockStart",
-        "title": "AMock Start",
+        "command": "extension.fmockStart",
+        "title": "FMock Start",
         "icon": {
           "light": "resources/light/run.svg",
           "dark": "resources/dark/run.svg"
         }
       },
       {
-        "command": "extension.amockReload",
-        "title": "AMock Reload",
+        "command": "extension.fmockReload",
+        "title": "FMock Reload",
         "icon": {
           "light": "resources/light/refresh.svg",
           "dark": "resources/dark/refresh.svg"
         }
       },
       {
-        "command": "extension.amockStop",
-        "title": "AMock Stop",
+        "command": "extension.fmockStop",
+        "title": "FMock Stop",
         "icon": {
           "light": "resources/light/stop.svg",
           "dark": "resources/dark/stop.svg"
@@ -71,18 +81,18 @@
     "menus": {
       "view/title": [
         {
-          "command": "extension.amockStart",
-          "when": "view == amock",
+          "command": "extension.fmockStart",
+          "when": "view == fmock",
           "group": "navigation@1"
         },
         {
-          "command": "extension.amockReload",
-          "when": "view == amock",
+          "command": "extension.fmockReload",
+          "when": "view == fmock",
           "group": "navigation@2"
         },
         {
-          "command": "extension.amockStop",
-          "when": "view == amock",
+          "command": "extension.fmockStop",
+          "when": "view == fmock",
           "group": "navigation@3"
         }
       ]
@@ -96,18 +106,20 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
+    "@types/cookie-parser": "^1.4.3",
     "@types/glob": "^7.1.1",
     "@types/mocha": "^5.2.6",
     "@types/node": "^10.12.21",
     "@types/vscode": "^1.38.0",
     "glob": "^7.1.4",
     "mocha": "^6.1.4",
-    "typescript": "^3.3.1",
     "tslint": "^5.12.1",
+    "typescript": "^3.3.1",
     "vscode-test": "^1.2.0"
   },
   "dependencies": {
     "@types/express": "^4.17.1",
+    "cookie-parser": "^1.4.6",
     "express": "^4.17.1"
   }
 }
